@@ -1,0 +1,273 @@
+1521330372918:pwdw
+1521330373855:pwd
+1521330375497:pwd
+1521330529617:mycsv <- read.csv("/home/rstudio/data/prediction_weather.psv",
+1521330529621:sep = "|",
+1521330529625:header = FALSE)
+1521330537507:#install.packages("ggplot2")
+1521330537511:# load package and data
+1521330537515:options(scipen=999)  # turn-off scientific notation like 1e+48
+1521330537519:library(ggplot2)
+1521330537526:theme_set(theme_bw())  # pre-set the bw theme.
+1521330537530:data("midwest", package = "ggplot2")
+1521330537535:mycsv <- read.csv("/home/rstudio/data/prediction_weather.psv",
+1521330537539:sep = "|",
+1521330537543:header = FALSE)
+1521330537551:colnames(mycsv) <- c('station_id','Lat', 'Lon','rainfall_mm','3pm_relative_humidity','3pm_msl_pressure_hpa', 'minimum_temperature', 'maximum_temperature','Conditions','predicted_date')
+1521330537556:#View(mycsv)
+1521330543465:ggplot(data = mycsv, aes(x = predicted_date)) +
+1521330543469:geom_line(aes(y = mycsv$rainfall_mm, colour = "rainfall_mm")) +
+1521330543473:geom_line(aes(y = mycsv$minimum_temperature, colour = "minimum_temperature")) +
+1521330543476:geom_line(aes(y = mycsv$maximum_temperature, colour = "maximum_temperature")) +
+1521330543480:scale_colour_manual("",
+1521330543484:breaks = c("rainfall_mm", "minimum_temperature", "maximum_temperature"),
+1521330543487:values = c("red", "green", "blue")) +
+1521330543490:xlab(" ") +
+1521330543494:scale_y_continuous("Temperatura (C)", limits = c(-10,40)) +
+1521330543497:labs(title="TITULO")
+1521330654337:#install.packages("ggplot2")
+1521330654343:# load package and data
+1521330654348:list.of.packages <- c("ggplot2")
+1521330655255:new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+1521330656576:if(length(new.packages)) install.packages(new.packages)
+1521330826134:ggplot(data = mycsv, aes(x = predicted_date)) +
+1521330826138:geom_line(aes(y = mycsv$rainfall_mm, colour = "rainfall_mm")) +
+1521330826143:geom_line(aes(y = mycsv$minimum_temperature, colour = "minimum_temperature")) +
+1521330826148:geom_line(aes(y = mycsv$maximum_temperature, colour = "maximum_temperature")) +
+1521330826152:scale_colour_manual("",
+1521330826156:breaks = c("rainfall_mm", "minimum_temperature", "maximum_temperature"),
+1521330826160:values = c("red", "green", "blue")) +
+1521330826165:xlab(" ") +
+1521330826169:scale_y_continuous("Temperatura (C)", limits = c(-10,40)) +
+1521330826173:labs(title="TITULO")
+1521330835704:#install.packages("ggplot2")
+1521330835708:# load package and data
+1521330835713:list.of.packages <- c("ggplot2")
+1521330835719:new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+1521330835725:if(length(new.packages)) install.packages(new.packages)
+1521330835735:options(scipen=999)  # turn-off scientific notation like 1e+48
+1521330835740:library(ggplot2)
+1521330835948:theme_set(theme_bw())  # pre-set the bw theme.
+1521330836012:data("midwest", package = "ggplot2")
+1521330836018:mycsv <- read.csv("/home/rstudio/data/prediction_weather.psv",
+1521330836022:sep = "|",
+1521330836027:header = FALSE)
+1521330836035:colnames(mycsv) <- c('station_id','Lat', 'Lon','rainfall_mm','3pm_relative_humidity','3pm_msl_pressure_hpa', 'minimum_temperature', 'maximum_temperature','Conditions','predicted_date')
+1521330836038:#View(mycsv)
+1521330839288:ggplot(data = mycsv, aes(x = predicted_date)) +
+1521330839293:geom_line(aes(y = mycsv$rainfall_mm, colour = "rainfall_mm")) +
+1521330839297:geom_line(aes(y = mycsv$minimum_temperature, colour = "minimum_temperature")) +
+1521330839301:geom_line(aes(y = mycsv$maximum_temperature, colour = "maximum_temperature")) +
+1521330839307:scale_colour_manual("",
+1521330839311:breaks = c("rainfall_mm", "minimum_temperature", "maximum_temperature"),
+1521330839315:values = c("red", "green", "blue")) +
+1521330839319:xlab(" ") +
+1521330839324:scale_y_continuous("Temperatura (C)", limits = c(-10,40)) +
+1521330839328:labs(title="TITULO")
+1521330857850:View(mycsv)
+1521331872426:#install.packages("ggplot2")
+1521331872432:# load package and data
+1521331872440:list.of.packages <- c("ggplot2")
+1521331872447:new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+1521331872456:if(length(new.packages)) install.packages(new.packages)
+1521331872471:options(scipen=999)  # turn-off scientific notation like 1e+48
+1521331872477:library(ggplot2)
+1521331872485:theme_set(theme_bw())  # pre-set the bw theme.
+1521331872497:data("midwest", package = "ggplot2")
+1521331872507:mycsv <- read.csv("/home/rstudio/data/prediction_weather.psv",
+1521331872513:sep = "|",
+1521331872521:header = FALSE)
+1521331872614:colnames(mycsv) <- c('station_id','Lat', 'Lon','rainfall_mm','3pm_relative_humidity','3pm_msl_pressure_hpa', 'minimum_temperature', 'maximum_temperature','Conditions','predicted_date')
+1521331872620:View(mycsv)
+1521331878069:ggplot(data = mycsv, aes(x = predicted_date)) +
+1521331878073:geom_line(aes(y = mycsv$rainfall_mm, colour = "rainfall_mm")) +
+1521331878077:geom_line(aes(y = mycsv$minimum_temperature, colour = "minimum_temperature")) +
+1521331878081:geom_line(aes(y = mycsv$maximum_temperature, colour = "maximum_temperature")) +
+1521331878085:scale_colour_manual("",
+1521331878090:breaks = c("rainfall_mm", "minimum_temperature", "maximum_temperature"),
+1521331878093:values = c("red", "green", "blue")) +
+1521331878097:xlab(" ") +
+1521331878100:scale_y_continuous("Temperatura (C)", limits = c(-10,40)) +
+1521331878104:labs(title="TITULO")
+1521331894889:ggplot(data = mycsv, aes(x = predicted_date)) +
+1521331894894:geom_line(aes(y = mycsv$rainfall_mm, colour = "rainfall_mm")) +
+1521331894898:geom_line(aes(y = mycsv$minimum_temperature, colour = "minimum_temperature")) +
+1521331894902:geom_line(aes(y = mycsv$maximum_temperature, colour = "maximum_temperature")) +
+1521331894906:scale_colour_manual("",
+1521331894910:breaks = c("rainfall_mm", "minimum_temperature", "maximum_temperature"),
+1521331894914:values = c("red", "green", "blue")) +
+1521331894917:xlab(" ") +
+1521331894921:scale_y_continuous("Temperatura (C)", limits = c(-10,40)) +
+1521331894925:labs(title="Weather prediction")
+1521332093611:# labels and breaks for X axis text
+1521332093615:lbls <- paste0(month.abb[month(mycsv$predicted_date)], " ", lubridate::year(mycsv$predicted_date))
+1521332113067:library(lubridate)
+1521332146638:list.of.packages <- c("ggplot2","lubridate")
+1521332146642:new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+1521332146648:if(length(new.packages)) install.packages(new.packages)
+1521332172694:options(scipen=999)  # turn-off scientific notation like 1e+48
+1521332172699:library(ggplot2)
+1521332172703:library(lubridate)
+1521332223416:# labels and breaks for X axis text
+1521332223421:lbls <- paste0(month.abb[month(mycsv$predicted_date)], " ", lubridate::year(mycsv$predicted_date))
+1521332223447:brks <- mycsv$predicted_date
+1521332395992:# plot
+1521332395997:ggplot(mycsv, aes(x=mycsv$predicted_date)) +
+1521332396002:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521332396007:labs(title="Monthly Time Series",
+1521332396013:subtitle="Returns Percentage from Economics Dataset",
+1521332396018:caption="Source: Economics",
+1521332396022:y="Returns %") +  # title and caption
+1521332396028:scale_x_date(labels = lbls,
+1521332396032:breaks = brks) +  # change to monthly ticks and labels
+1521332396036:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521332396040:panel.grid.minor = element_blank())  # turn off minor grid
+1521332509665:# labels and breaks for X axis text
+1521332509669:lbls <- paste0(month.abb[month(mycsv$predicted_date)], " ", lubridate::year(mycsv$predicted_date))
+1521332509694:brks <- mycsv$predicted_date
+1521332509700:# plot
+1521332509704:ggplot(mycsv, aes(x=mycsv$predicted_date)) +
+1521332509709:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521332509712:labs(title="Monthly Time Series",
+1521332509716:subtitle="Returns Percentage from Economics Dataset",
+1521332509719:caption="Source: Economics",
+1521332509723:y="Returns %") +  # title and caption
+1521332509727:scale_x_date(labels = lbls,
+1521332509731:breaks = brks) +  # change to monthly ticks and labels
+1521332509734:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521332509738:panel.grid.minor = element_blank())  # turn off minor grid
+1521332606364:ggplot(mycsv, aes(x=mycsv$predicted_date)) +
+1521332606368:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521332606372:labs(title="Time Series Chart",
+1521332606378:subtitle="Returns Percentage from 'Economics' Dataset",
+1521332606382:caption="Source: Economics",
+1521332606386:y="Returns %")
+1521332695892:brks
+1521332731906:lbls
+1521332799933:# labels and breaks for X axis text
+1521332799938:lbls <- paste0(month.abb[month(mycsv$predicted_date)], " ", lubridate::year(mycsv$predicted_date))
+1521332799961:brks <- mycsv$predicted_date
+1521332799967:# plot
+1521332799971:ggplot(mycsv, aes(x=mycsv$predicted_date)) +
+1521332799974:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521332799979:labs(title="Monthly Time Series",
+1521332799982:subtitle="Returns Percentage from Economics Dataset",
+1521332799986:caption="Source: Economics",
+1521332799989:y="Returns %") +  # title and caption
+1521332799993:scale_x_date(labels = lbls,
+1521332799996:breaks = brks) +  # change to monthly ticks and labels
+1521332800001:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521332800005:panel.grid.minor = element_blank())  # turn off minor grid
+1521332975252:ggplot(mycsv, aes(x=as.Date(mycsv$predicted_date,"%Y-%m-%d")) +
+1521332975257:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521332975262:labs(title="Monthly Time Series",
+1521332975268:subtitle="Returns Percentage from Economics Dataset",
+1521332975273:caption="Source: Economics",
+1521332975277:y="Returns %") +  # title and caption
+1521332975283:scale_x_date(labels = lbls,
+1521332975288:breaks = brks) +  # change to monthly ticks and labels
+1521332975292:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521332975298:panel.grid.minor = element_blank())  # turn off minor grid
+1521333007264:mycsv$predicted_date
+1521333022914:View(mycsv$predicted_date)
+1521333043546:View(as.Date(mycsv$predicted_date,"%Y-%m-%d"))
+1521333072540:# plot
+1521333072544:ggplot(mycsv, aes(x=as.Date(mycsv$predicted_date,"%Y-%m-%d")) +
+1521333072548:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333072551:labs(title="Monthly Time Series",
+1521333072556:subtitle="Returns Percentage from Economics Dataset",
+1521333072561:caption="Source: Economics",
+1521333072564:y="Returns %") +  # title and caption
+1521333072568:scale_x_date(labels = lbls,
+1521333072572:breaks = brks) +  # change to monthly ticks and labels
+1521333072575:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333072580:panel.grid.minor = element_blank())  # turn off minor grid
+1521333124259:# labels and breaks for X axis text
+1521333124264:lbls <- paste0(month.abb[month(mycsv$predicted_date)], " ", lubridate::year(mycsv$predicted_date))
+1521333124268:brks <- mycsv$predicted_date
+1521333124278:# plot
+1521333124282:ggplot(mycsv, aes(x=as.Date(mycsv$predicted_date,"%Y-%m-%d")) +
+1521333124286:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333124290:labs(title="Monthly Time Series",
+1521333124296:subtitle="Returns Percentage from Economics Dataset",
+1521333124302:caption="Source: Economics",
+1521333124306:y="Returns %") +  # title and caption
+1521333124311:scale_x_date(labels = lbls,
+1521333124315:breaks = brks) +  # change to monthly ticks and labels
+1521333124321:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333124325:panel.grid.minor = element_blank())  # turn off minor grid
+1521333143418:ggplot(mycsv, aes(x=as.Date(mycsv$predicted_date,"%Y-%m-%d")) +
+1521333143424:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333143429:labs(title="Monthly Time Series",
+1521333143433:subtitle="Returns Percentage from Economics Dataset",
+1521333143439:caption="Source: Economics",
+1521333143443:y="Returns %") +  # title and caption
+1521333143448:scale_x_date(labels = lbls,
+1521333143455:breaks = brks) +  # change to monthly ticks and labels
+1521333143461:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333143466:panel.grid.minor = element_blank())  # turn off minor grid
+1521333143478:)
+1521333161416:# plot
+1521333161422:ggplot(mycsv, aes(x=as.Date(mycsv$predicted_date,"%Y-%m-%d")) +
+1521333161426:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333161431:labs(title="Monthly Time Series",
+1521333161436:subtitle="Returns Percentage from Economics Dataset",
+1521333161439:caption="Source: Economics",
+1521333161443:y="Returns %") +  # title and caption
+1521333161449:scale_x_date(labels = lbls,
+1521333161453:breaks = brks) +  # change to monthly ticks and labels
+1521333161458:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333161462:panel.grid.minor = element_blank()))  # turn off minor grid
+1521333204560:# plot
+1521333204566:ggplot(mycsv, aes(x=as.Date(mycsv$predicted_date,"%Y-%m-%d")) +
+1521333204571:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333204576:labs(title="Monthly Time Series",
+1521333204582:subtitle="Returns Percentage from Economics Dataset",
+1521333204587:caption="Source: Economics",
+1521333204592:y="Returns %") +  # title and caption
+1521333204596:scale_x_date(labels = lbls,
+1521333204603:breaks = brks) +  # change to monthly ticks and labels
+1521333204608:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333204612:panel.grid.minor = element_blank()))  # turn off minor grid
+1521333228806:# plot
+1521333228812:ggplot(mycsv, aes(x=(as.Date(mycsv$predicted_date,"%Y-%m-%d"))) +
+1521333228818:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333228823:labs(title="Monthly Time Series",
+1521333228828:subtitle="Returns Percentage from Economics Dataset",
+1521333228833:caption="Source: Economics",
+1521333228838:y="Returns %") +  # title and caption
+1521333228843:scale_x_date(labels = lbls,
+1521333228849:breaks = brks) +  # change to monthly ticks and labels
+1521333228853:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333228859:panel.grid.minor = element_blank()))  # turn off minor grid
+1521333254027:ggplot(mycsv, aes(x=mycsv$predicted_date) +
+1521333254034:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333254040:labs(title="Monthly Time Series",
+1521333254047:subtitle="Returns Percentage from Economics Dataset",
+1521333254051:caption="Source: Economics",
+1521333254057:y="Returns %") +  # title and caption
+1521333254066:scale_x_date(labels = lbls,
+1521333254071:breaks = brks) +  # change to monthly ticks and labels
+1521333254077:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333254084:panel.grid.minor = element_blank()))  # turn off minor grid
+1521333279271:ggplot(mycsv, aes(x=mycsv$predicted_date) +
+1521333279278:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333279282:labs(title="Monthly Time Series",
+1521333279287:subtitle="Returns Percentage from Economics Dataset",
+1521333279294:caption="Source: Economics",
+1521333279298:y="Returns %") +  # title and caption
+1521333279302:scale_x_date(labels = lbls,
+1521333279309:breaks = brks) +  # change to monthly ticks and labels
+1521333279313:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333279317:panel.grid.minor = element_blank()))  # turn off minor grid
+1521333299058:# plot
+1521333299063:ggplot(mycsv, aes(x=mycsv$predicted_date) +
+1521333299069:geom_line(aes(y=mycsv$rainfall_mm)) +
+1521333299073:labs(title="Monthly Time Series",
+1521333299079:subtitle="Returns Percentage from Economics Dataset",
+1521333299083:caption="Source: Economics",
+1521333299089:y="Returns %") +  # title and caption
+1521333299093:scale_x_date(labels = lbls,
+1521333299099:breaks = brks) +  # change to monthly ticks and labels
+1521333299103:theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+1521333299109:panel.grid.minor = element_blank()))  # turn off minor grid

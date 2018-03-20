@@ -1,0 +1,17 @@
+# labels and breaks for X axis text
+lbls <- paste0(month.abb[month(mycsv$predicted_date)], " ", lubridate::year(mycsv$predicted_date))
+brks <- mycsv$predicted_date
+
+#(as.Date(mycsv$predicted_date,"%Y-%m-%d"))
+
+# plot
+ggplot(mycsv, aes(x=mycsv$predicted_date) + 
+  geom_line(aes(y=mycsv$rainfall_mm)) + 
+  labs(title="Monthly Time Series", 
+       subtitle="Returns Percentage from Economics Dataset", 
+       caption="Source: Economics", 
+       y="Returns %") +  # title and caption
+  scale_x_date(labels = lbls, 
+               breaks = brks) +  # change to monthly ticks and labels
+  theme(axis.text.x = element_text(angle = 90, vjust=0.5),  # rotate x axis text
+        panel.grid.minor = element_blank()))  # turn off minor grid

@@ -1,0 +1,10 @@
+ggplot(data = mycsv, aes(x = predicted_date)) +
+  geom_line(aes(y = mycsv$rainfall_mm, colour = "rainfall_mm")) +
+  geom_line(aes(y = mycsv$minimum_temperature, colour = "minimum_temperature")) +
+  geom_line(aes(y = mycsv$maximum_temperature, colour = "maximum_temperature")) +
+  scale_colour_manual("", 
+                      breaks = c("rainfall_mm", "minimum_temperature", "maximum_temperature"),
+                      values = c("red", "green", "blue")) +
+  xlab(" ") +
+  scale_y_continuous("Temperatura (C)", limits = c(-10,40)) + 
+  labs(title="Weather prediction")

@@ -1,0 +1,15 @@
+]0;/home/rstudiorstudio@4983ffe432c3:~$ [Krstudio@4983ffe432c3:~$ pwd
+/home/rstudio
+]0;/home/rstudiorstudio@4983ffe432c3:~$ ls -l
+total 616
+drwxr-xr-x 12 rstudio rstudio    384 Mar 17 23:02 data
+drwxr-xr-x  2 root    root      4096 Mar 17 23:42 kitematic
+-rw-r--r--  1 rstudio rstudio  81617 Mar 17 21:48 pandas_visualize.ipynb
+-rw-r--r--  1 rstudio rstudio 296868 Mar 17 23:03 predict_weather.ipynb
+-rw-r--r--  1 rstudio rstudio   2158 Mar 17 21:48 README.md
+-rw-r--r--  1 rstudio rstudio   3859 Mar 17 21:48 scala_data_validation.ipynb
+drwxr-xr-x  2 rstudio rstudio     64 Mar 17 22:06 spark-warehouse
+-rw-r--r--  1 rstudio rstudio    629 Mar 17 22:56 staion_id.csv
+-rw-r--r--  1 rstudio rstudio   6540 Mar 17 22:27 weather_api_data_read.ipynb
+-rw-r--r--  1 rstudio rstudio 194094 Mar 17 21:48 z_predict_arima.ipynb
+]0;/home/rstudiorstudio@4983ffe432c3:~$ c[K[Krstudio@4983ffe432c3:~$ 
