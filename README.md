@@ -7,7 +7,8 @@
 
 3. docker run command with volume mount: toolsets included in the docker image are  jupyter notebook, scala, python, R, spark.
 ```
-sudo docker run -it --rm -v /Users/host:/home/jovyan  -d -p 8888:8888 jupyter/all-spark-notebook
+sudo docker run -it --rm -v $pwd:/home/jovyan  -d -p 8888:8888 jupyter/all-spark-notebook
+sudo docker run -d -p 8787:8787 -v $(pwd):/home/rstudio rocker/rstudio
 ```
 4. Firewall port should be open for BOM API connections
 
@@ -52,3 +53,4 @@ Step 4: Visualization
 
 ## Acknowledgments
 * jupyter/all-spark-notebook - is used
+* rocker/rstudio
